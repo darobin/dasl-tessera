@@ -20,7 +20,8 @@
   --sun-red: red;
   --indian-pink: #e8358f;
   --hot-orange: #fc8208;
-  --dark-foundation: linear-gradient(#111, #9198e5);
+  /*--dark-foundation: linear-gradient(#111, #9198e5);*/
+  --dark-foundation: linear-gradient(#111 30%, lch(from var(--indian-pink) 15% c h));
 
   /* XXX these are old colour from Ziran
   --amethyst: hsl(267, 72%, 63%);
@@ -70,6 +71,7 @@ header {
   padding: 0 0.5rem;
   align-items: center;
   background-color: var(--indian-pink);
+  border-bottom: 1px solid var(--hot-yellow);
 }
 header > img {
   padding: 0.2rem 0 0.2rem 1rem;
@@ -77,14 +79,14 @@ header > img {
 }
 header > h1 {
   font-family: var(--header-fam);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
   font-size: 1.2rem;
   line-height: 1.2;
   color: var(--hot-yellow);
   padding: 0.4rem 1rem 0 0;
-  margin: 0 0.6rem;
+  margin: 0 0.2rem;
   flex-grow: 1;
 }
 main {
