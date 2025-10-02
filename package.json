@@ -1,0 +1,51 @@
+{
+  "name": "@dasl/tessera",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "Experimental web tiles viewer",
+  "author": "Robin Berjon <robin@berjon.com>",
+  "license": "Apache-2.0",
+  "scripts": {
+    "dev": "npm run tauri dev",
+    "watch": "concurrently --handle-input npm:watch-css npm:watch-js npm:dev",
+    "watch-js": "./build.js --watch",
+    "build-js": "./build.js",
+    "watch-css": "NODE_ENV=production cssn --watch src/ziran.css src/ziran.min.css",
+    "android": "npm run tauri android dev",
+    "ios": "npm run tauri ios dev",
+    "tauri": "tauri",
+    "update-assets": "mkdir -p src/assets && cp -R node_modules/\\@shoelace-style/shoelace/dist/assets/icons src/assets/icons"
+  },
+  "bin": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/darobin/dasl-tessera.git"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "mocha": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module"
+    },
+    "rules": {}
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2"
+  },
+  "dependencies": {
+    "@nanostores/lit": "github:nanostores/lit#4d3bf5688dc38d3e55f8f638950195ea9bcaf819",
+    "@shoelace-style/shoelace": "^2.20.1",
+    "concurrently": "^9.2.1",
+    "cssn": "^4.1.0",
+    "esbuild": "^0.25.10",
+    "eslint": "^9.36.0",
+    "lit": "^3.3.1",
+    "nanostores": "^1.0.1"
+  }
+}

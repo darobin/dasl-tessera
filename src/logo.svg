@@ -1,0 +1,29 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+  <linearGradient id="snake" gradientTransform="rotate(90)">
+    <stop offset="5%" stop-color="#50c878"></stop>
+    <stop offset="95%" stop-color="#128C63"></stop>
+  </linearGradient>
+  <linearGradient id="sunny" gradientTransform="rotate(90)">
+    <stop offset="5%" stop-color="#fddd0a"></stop>
+    <stop offset="95%" stop-color="red"></stop>
+  </linearGradient>
+  <!-- bg -->
+  <rect x="0" y="0" width="100%" height="100%" fill="#000"></rect>
+  <!-- banner -->
+  <rect x="0" y="0" width="100%" height="380" fill="#e8358f"></rect>
+  <g transform="translate(400,300)">
+    <!-- circle -->
+    <circle cx="0" cy="0" r="120" fill="url(#sunny)" stroke="#fc8208" stroke-width="8"></circle>
+    <!-- snake -->
+    <g>
+      <polygon
+        points="-40,-70 40,-70 100,0 20,140 -20,140 -100,0 z"
+        fill="url(#snake)" stroke="#000" stroke-width="6" stroke-linejoin="round"></polygon>
+      <circle cx="-40" cy="20" r="10" fill="#000"></circle>
+      <circle cx="40" cy="20" r="10" fill="#000"></circle>
+      <circle cx="-10" cy="120" r="5" fill="#000"></circle>
+      <circle cx="10" cy="120" r="5" fill="#000"></circle>
+    </g>
+  </g>
+</svg>

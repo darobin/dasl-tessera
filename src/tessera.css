@@ -1,0 +1,100 @@
+
+@import "@shoelace-style/shoelace/dist/themes/light.css";
+
+@font-face {
+  font-family: "Cormorant";
+  src: url("fonts/Cormorant-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Cormorant";
+  src: url("fonts/Cormorant-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("fonts/Mulish-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Mulish";
+  src: url("fonts/Mulish-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+
+:root {
+  --header-fam: Cormorant;
+  --fresh-green: #50c878;
+  --emerald: #128C63;
+  --hot-yellow: #fddd0a;
+  --sun-red: red;
+  --indian-pink: #e8358f;
+  --hot-orange: #fc8208;
+
+  /* XXX these are old colour from Ziran */
+  --amethyst: hsl(267, 72%, 63%);
+  --brilliant-rose: hsl(324, 84%, 65%);
+  --maize: hsl(52, 99%, 62%);
+  --deep-sky-blue: hsl(195, 100%, 49%);
+  --darker-deep-sky-blue: hsl(195, 100%, 40%);
+  --aquamarine: hsl(172, 100%, 48%);
+  --bright-bg: #fff;
+  --shaded-bg: #eee;
+
+  font-family: Mulish;
+  font-size: 16px;
+  line-height: 1.5rem;
+  font-weight: 400;
+
+  color: #000;
+  background-color: #fff;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+/* Customise the theme */
+:root,
+:host,
+.sl-theme-light {
+  --sl-font-sans: Mulish;
+  --sl-font-serif: Cormorant;
+  --sl-color-primary-600: var(--darker-deep-sky-blue);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--shaded-bg);
+}
+header {
+  display: flex;
+  padding: 0 1rem;
+  border-bottom: 1px dotted var(--aquamarine);
+  box-shadow: 0 1px 4px #ccc;
+  align-items: center;
+  background-color: var(--bright-bg);
+}
+header > h1 {
+  font-family: var(--header-fam);
+  font-weight: 900;
+  line-height: 1.2;
+  color: var(--darker-deep-sky-blue);
+  padding: 0 1rem 0.2rem 1rem;
+  margin: 0 0.6rem;
+  flex-grow: 1;
+  text-align: right;
+  border-right: 1px dotted var(--darker-deep-sky-blue);
+}
+main {
+  display: flex;
+  flex-grow: 1;
+  overflow-x: auto;
+}
