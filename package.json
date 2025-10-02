@@ -10,7 +10,7 @@
     "watch": "concurrently --handle-input npm:watch-css npm:watch-js npm:dev",
     "watch-js": "./build.js --watch",
     "build-js": "./build.js",
-    "watch-css": "NODE_ENV=production cssn --watch src/ziran.css src/ziran.min.css",
+    "watch-css": "NODE_ENV=production cssn --watch src/tessera.css src/tessera.min.css",
     "android": "npm run tauri android dev",
     "ios": "npm run tauri ios dev",
     "tauri": "tauri",
@@ -41,6 +41,7 @@
   "dependencies": {
     "@nanostores/lit": "github:nanostores/lit#4d3bf5688dc38d3e55f8f638950195ea9bcaf819",
     "@shoelace-style/shoelace": "^2.20.1",
+    "@tauri-apps/api": "^2.8.0",
     "concurrently": "^9.2.1",
     "cssn": "^4.1.0",
     "esbuild": "^0.25.10",
