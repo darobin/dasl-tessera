@@ -1,5 +1,5 @@
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 600">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 250 250">
   <linearGradient id="snake" gradientTransform="rotate(90)">
     <stop offset="5%" stop-color="#50c878"></stop>
     <stop offset="95%" stop-color="#128C63"></stop>
@@ -9,10 +9,10 @@
     <stop offset="95%" stop-color="red"></stop>
   </linearGradient>
   <!-- bg -->
-  <rect x="0" y="0" width="100%" height="100%" fill="#000"></rect>
+  <!--<rect x="0" y="0" width="100%" height="100%" fill="#000"></rect>-->
   <!-- banner -->
-  <rect x="0" y="0" width="100%" height="380" fill="#e8358f"></rect>
-  <g transform="translate(400,300)">
+  <!--<rect x="0" y="0" width="100%" height="380" fill="#e8358f"></rect>-->
+  <g transform="translate(125,125)">
     <!-- circle -->
     <circle cx="0" cy="0" r="120" fill="url(#sunny)" stroke="#fc8208" stroke-width="8"></circle>
     <!-- snake -->

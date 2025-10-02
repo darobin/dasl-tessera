@@ -2,16 +2,6 @@
 @import "@shoelace-style/shoelace/dist/themes/light.css";
 
 @font-face {
-  font-family: "Cormorant";
-  src: url("fonts/Cormorant-VariableFont_wght.ttf");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Cormorant";
-  src: url("fonts/Cormorant-Italic-VariableFont_wght.ttf");
-  font-style: italic;
-}
-@font-face {
   font-family: "Mulish";
   src: url("fonts/Mulish-VariableFont_wght.ttf");
   font-style: normal;
@@ -23,15 +13,16 @@
 }
 
 :root {
-  --header-fam: Cormorant;
+  --header-fam: Mulish;
   --fresh-green: #50c878;
   --emerald: #128C63;
   --hot-yellow: #fddd0a;
   --sun-red: red;
   --indian-pink: #e8358f;
   --hot-orange: #fc8208;
+  --dark-foundation: linear-gradient(#111, #9198e5);
 
-  /* XXX these are old colour from Ziran */
+  /* XXX these are old colour from Ziran
   --amethyst: hsl(267, 72%, 63%);
   --brilliant-rose: hsl(324, 84%, 65%);
   --maize: hsl(52, 99%, 62%);
@@ -40,6 +31,7 @@
   --aquamarine: hsl(172, 100%, 48%);
   --bright-bg: #fff;
   --shaded-bg: #eee;
+   */
 
   font-family: Mulish;
   font-size: 16px;
@@ -60,7 +52,6 @@
 :host,
 .sl-theme-light {
   --sl-font-sans: Mulish;
-  --sl-font-serif: Cormorant;
   --sl-color-primary-600: var(--darker-deep-sky-blue);
 }
 
@@ -72,26 +63,29 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: var(--shaded-bg);
+  background: var(--dark-foundation);
 }
 header {
   display: flex;
-  padding: 0 1rem;
-  border-bottom: 1px dotted var(--aquamarine);
-  box-shadow: 0 1px 4px #ccc;
+  padding: 0 0.5rem;
   align-items: center;
-  background-color: var(--bright-bg);
+  background-color: var(--indian-pink);
+}
+header > img {
+  padding: 0.2rem 0 0.2rem 1rem;
+  margin-bottom: -1rem;
 }
 header > h1 {
   font-family: var(--header-fam);
-  font-weight: 900;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-size: 1.2rem;
   line-height: 1.2;
-  color: var(--darker-deep-sky-blue);
-  padding: 0 1rem 0.2rem 1rem;
+  color: var(--hot-yellow);
+  padding: 0.4rem 1rem 0 0;
   margin: 0 0.6rem;
   flex-grow: 1;
-  text-align: right;
-  border-right: 1px dotted var(--darker-deep-sky-blue);
 }
 main {
   display: flex;
