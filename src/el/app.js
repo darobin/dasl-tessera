@@ -1,6 +1,6 @@
 
 import { LitElement, html, css } from "lit";
-import { openTile } from '../store.js';
+import { openTile, openWindow } from '../store.js';
 import { buttons } from "./styles.js";
 
 customElements.define("ts-app", class extends LitElement {
@@ -35,6 +35,10 @@ customElements.define("ts-app", class extends LitElement {
       <main>
         <div id="content"></div>
         <div id="actions">
+          <sl-button @click=${openWindow}>
+            <sl-icon name="file-earmark-plus" slot="prefix"></sl-icon>
+            Open Window Debug
+          </sl-button>
           <sl-button @click=${openTile}>
             <sl-icon name="file-earmark-plus" slot="prefix"></sl-icon>
             Open Tile

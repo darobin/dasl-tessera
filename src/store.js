@@ -1,6 +1,6 @@
 
 import { getCurrentWindow, currentMonitor, LogicalSize, PhysicalPosition } from "@tauri-apps/api/window";
-// import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
+import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
 import { open as openDialog } from '@tauri-apps/plugin-dialog';
 import CarTileReader from "./car-reader.js";
 
@@ -15,6 +15,28 @@ export async function positionMainWindow () {
   await win.setSize(new LogicalSize(600, mon.workArea.size.height));
   await win.setPosition(new PhysicalPosition(0, 0));
 }
+
+// XXX this might not be real
+export async function openWindow () {
+  console.warn(`open window`);
+  new WebviewWindow('bafkreifn5yxi7nkftsn46b6x26grda57ict7md2xuvfbsgkiahe2e7vnq4', {
+    url: '/cid.html?cid=bafkreifn5yxi7nkftsn46b6x26grda57ict7md2xuvfbsgkiahe2e7vnq4',
+    x: 1000,
+    y: 0,
+    width: 800,
+    height: 600,
+    incognito: true,
+  });
+  new WebviewWindow('xxxx', {
+    url: '/cid.html?cid=xxxx',
+    x: 2000,
+    y: 7000,
+    width: 800,
+    height: 600,
+    incognito: true,
+  });
+}
+
 
 // ## Tiles
 //
@@ -35,41 +57,3 @@ export async function openTile () {
   // - add to list of previously open
   // - load into a window
 }
-
-
-// trying things
-// document.querySelector('#win').onclick = () => {
-//   console.warn(`open window`);
-//   const webview = new WebviewWindow('bafkreifn5yxi7nkftsn46b6x26grda57ict7md2xuvfbsgkiahe2e7vnq4', {
-//     url: '/cid.html',
-//     // x: 0,
-//     // y: 0,
-//     width: 800,
-//     height: 600,
-//   });
-//   webview.once('tauri://created', function () {
-//    // webview successfully created
-//   });
-//   webview.once('tauri://error', function (e) {
-//    // an error happened creating the webview
-//   });
-//   // const appWindow = new Window('win/bafkreifn5yxi7nkftsn46b6x26grda57ict7md2xuvfbsgkiahe2e7vnq4');
-//   // console.warn(`win`, appWindow);
-//   // appWindow.once('tauri://created', async () => {
-//   //   console.warn(`win created`);
-//   //   const wv = new Webview(appWindow, 'wv/bafkreifn5yxi7nkftsn46b6x26grda57ict7md2xuvfbsgkiahe2e7vnq4', {
-//   //     url: '/index.html',
-//   //     // url: 'https://berjon.com/',
-//       // x: 0,
-//       // y: 0,
-//       // width: 800,
-//       // height: 600,
-//   //   });
-//   //   console.warn(`wv`, wv);
-//   //   console.warn(`show`, await wv.show());
-//   //   wv.once('tauri://created', () => {
-//   //     console.warn(`wv created`);
-//   //   });
-//   //   console.warn(`waiting for wv`);
-//   // });
-// };
