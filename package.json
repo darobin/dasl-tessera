@@ -39,6 +39,9 @@
     "@tauri-apps/cli": "^2"
   },
   "dependencies": {
+    "@atcute/cbor": "^2.2.5",
+    "@atcute/cid": "^2.2.3",
+    "@atcute/varint": "^1.0.2",
     "@nanostores/lit": "github:nanostores/lit#4d3bf5688dc38d3e55f8f638950195ea9bcaf819",
     "@shoelace-style/shoelace": "^2.20.1",
     "@tauri-apps/api": "^2.8.0",

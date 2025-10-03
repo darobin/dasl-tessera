@@ -2,7 +2,7 @@
 import { getCurrentWindow, currentMonitor, LogicalSize, PhysicalPosition } from "@tauri-apps/api/window";
 // import { WebviewWindow } from '@tauri-apps/api/webviewWindow';
 import { open as openDialog } from '@tauri-apps/plugin-dialog';
-import { open } from '@tauri-apps/plugin-fs';
+import CarTileReader from "./car-reader.js";
 
 
 // ## Window management
@@ -28,8 +28,8 @@ export async function openTile () {
     }],
   });
   if (!tile) return;
-  const file = await open(tile, { read: true });
-  console.warn(`got file…`, file);
+  const ctr = new CarTileReader(tile);
+  await ctr.open();
   // XXX
   // - parse tile
   // - add to list of previously open
