@@ -3,7 +3,7 @@ import '@shoelace-style/shoelace';
 import { positionMainWindow } from './store.js';
 
 // elements
-// import "./el/settings-button.js";
+import "./el/app.js";
 
 // window
 await positionMainWindow();
